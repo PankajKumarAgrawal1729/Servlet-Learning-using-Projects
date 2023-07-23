@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Form Submission using Servlet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .main-container{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid black;
+                padding: 5px;
+                font-size: 20px;
+            }
+            h1 {
+                text-decoration: underline;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="container">
+                <h1>My Form</h1>            
+                <form action="RequestDispatcher" method="post">
+                    <table>
+                        <tr>
+                            <td>Enter Your Name: </td>
+                            <td><input type="text" name="user_name" placeholder="Enter here"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Your Password: </td>
+                            <td><input type="password" name="user_password" placeholder="Enter here"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Your Email: </td>
+                            <td><input type="email" name="user_email" placeholder="Enter here"></td>
+                        </tr>
+                        <tr>
+                            <td>Select Gender: </td>
+                            <td><input type="radio" name="user_gender" value="male"> Male <input type="radio" name="user_gender" value="female"> Female</td>
+                        </tr>
+                        <tr>
+                            <td>Select Your Course: </td>
+                            <td>
+                                <select name="user_course">
+                                    <option value="Java">Java</option>
+                                    <option value="Python">Python</option>
+                                    <option value="Android">Android</option>
+                                    <option value="Machine Learning">Machine Learning</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" value="checked" name="condition"/>
+                                Agree Term and Conditions!
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit">Register</button>
+                                <button type="reset">Reset</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body> 
+</html>
