@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
   <display-name>DemoApp</display-name>
   
-  <servlet>
+  <!-- <servlet>
   <servlet-name>adding</servlet-name>
   <servlet-class>com.pankaj.AddServlet</servlet-class>
   </servlet>
@@ -11,5 +11,39 @@
   <servlet-name>adding</servlet-name>
   <url-pattern>/add</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>square</servlet-name>
+  <servlet-class>com.pankaj.SquareServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>square</servlet-name>
+  <url-pattern>/square</url-pattern>
+  </servlet-mapping> -->
+  
+  <servlet>
+  <servlet-name>ServletConfigandServletContext</servlet-name>
+  <servlet-class>com.pankaj.MyServlet</servlet-class>
+  <init-param>
+  <param-name>name</param-name>
+  <param-value>Ganga</param-value>
+  </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ServletConfigandServletContext</servlet-name>
+  <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  <param-name>name</param-name>
+  <param-value>Pankaj</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>Phone</param-name>
+  <param-value>Iphone13</param-value>
+  </context-param>
   
 </web-app>

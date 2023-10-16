@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>com.pankaj.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.pankaj.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/ProfileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!--filter declare-->
+    <filter>
+        <filter-name>profileFilter</filter-name>
+        <filter-class>com.pankaj.MyFilter</filter-class>
+    </filter>
+    
+    <!--filter mapping-->
+    <filter-mapping>
+        <filter-name>profileFilter</filter-name>
+        <url-pattern>/ProfileServlet</url-pattern>
+    </filter-mapping>
+</web-app>
